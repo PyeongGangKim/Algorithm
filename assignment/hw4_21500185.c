@@ -286,7 +286,7 @@ int main(){
     double wholeTime=0;
     item item[10001];
     int maxW=0;
-    srand(time(NULL));
+    srand(1);
     item[0].weight=item[0].benefit=0;
     for(int j=1;j<10001;j++){
             int wRandom= (rand()%100)+1;
