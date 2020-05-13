@@ -1,0 +1,3 @@
+greedy는 fractional로 풀어야됨
+먼저 input 값들을 weight당 value값들로 나누고 sort한다.
+weight가 다 찰때까지 앞에서 부터 쭉 넣는다.

@@ -32,7 +32,7 @@ void insert (){//insert new node
         return;
     }
     int newKey;
-    char newElement[22];
+    char newElement[50];
     node* newNode=(node*)malloc(sizeof(node));
     while(1){//get a new element name
         printf("Enter name of element: ");

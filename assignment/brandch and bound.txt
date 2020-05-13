@@ -1,0 +1,32 @@
+각 node가 존재
+node마다 bound weight benefit가 존재함.
+
+bound -> tot_weight의 benefit들 + W-tot_weight를 최대 benefit/weight로 채운값
+
+tot_weight란 현재 node의 weight에서 promising을 했을 때의 값, 자르지 않고
+온전하게 넣을 수 있는 weight의 값.
+
+weight는 현재 node에 넣은 값의 weight의 합.
+
+benefit는 현재 까지 넣은 것의 benefit
+
+global variable로 존재한느 것
+
+max_benefit--현재 까지의 benefit중 가장 max인것.
+
+if weight<W, max_benefit = max(max_benefit, benefit)
+
+promsing은 현재 node에서 expand 하는것.
+nonpromisng은 현재 node에서 멈추는 것.
+
+if bound<= max_benefit  or  weight>W, nonpromising.
+
+if bound> max_benefit and weight<=W, promising.
+
+bound<=max_benefit의 node는 effective하지만 do not expand anymore.
+
+weight > W의 node는 effective하지 않는다. 
+
+먼저 무게당 benefit값이 높은 순대로 sorting.
+
+expand하다가 막히면 max_benefit과 bound들을 비교한다.
